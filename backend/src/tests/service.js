@@ -2,7 +2,7 @@ const axios = require('axios');
 
 const data = {
   user: "672dcbf7e1a3a24a9c9a1b12",
-  title: "Logo Design Service",
+  title: "Logo Design Service", 
   description: "Professional logo design with unlimited revisions.",
   imageURL: "https://example.com/logo-sample.png",
   keywords: ["design", "logo", "branding"],

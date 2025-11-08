@@ -9,4 +9,5 @@ body{
   font-family: font;
   color: white;
   overflow-x: hidden;
+  user-select: none;
 }
