@@ -10,7 +10,7 @@ const Navbar = () => {
             <header className='w-full flex items-center justify-center h-24 relative z-50'>
                 <nav className='shadow-2xl top-0 left-0 border border-[#33394C] max-w-[90%] rounded-full mx-auto bg-[#151A28] px-4 md:px-8 text-white h-16 flex items-center justify-between w-full'>
                     <div className='text-2xl font-semibold'>
-                        SkillLink
+                        SkilLink
                     </div>
 
                     <div className='hidden md:flex items-center gap-5'>

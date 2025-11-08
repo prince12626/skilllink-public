@@ -24,8 +24,16 @@ const getServiceById = async (req, res) => {
 const createService = async (req, res) => {
             try {
                         const { user, title, description, imageURL, keywords, price } = req.body;
+                        const createdService = await serviceModel.create(user, title, description ,imageURL , keywords, price)
+                        res.status(201).json({
+                            message: "Service Created Successfully.",
+                            success: false,
+                            data: createdService
+                        })
             }
             catch (err) {
                         return res.status(500).json({message:'Internal Server Error!'})
             }
 }
+
+module.exports =  { createService, getServiceById, getServices}
