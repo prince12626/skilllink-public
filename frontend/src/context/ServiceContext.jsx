@@ -13,7 +13,7 @@ const ServiceProvider = ({ children }) => {
   }
 
   useEffect(() => {
-    getServices()
+    getServices();
   }, [])
 
   return (
@@ -26,5 +26,5 @@ const ServiceProvider = ({ children }) => {
 export default ServiceProvider
 
 export const useServices = () => {
-  return useContext(serviceContext)
+  useContext(serviceContext)
 }
