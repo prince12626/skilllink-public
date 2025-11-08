@@ -24,10 +24,10 @@ const getServiceById = async (req, res) => {
 const createService = async (req, res) => {
             try {
                         const { user, title, description, imageURL, keywords, price } = req.body;
-                        const createdService = await serviceModel.create(user, title, description ,imageURL , keywords, price)
+                        const createdService = await serviceModel.create({owner:user, title, description ,imageURL , keywords, price})
                         res.status(201).json({
                             message: "Service Created Successfully.",
-                            success: false,
+                            success: true,
                             data: createdService
                         })
             }
@@ -36,4 +36,4 @@ const createService = async (req, res) => {
             }
 }
 
-module.exports =  { createService, getServiceById, getServices}
+module.exports =  { createService, getServiceById, getServices};
