@@ -56,8 +56,9 @@ export default function Landing() {
         </button>
       </section>
 
-      <footer className="py-10 text-center text-gray-500 text-sm">
-        © {new Date().getFullYear()} SkillLink. All rights reserved.
+      <footer className="py-10 flex justify-between items-center text-white/90 text-sm px-10">
+        <h2>© {new Date().getFullYear()} SkillLink. All rights reserved.</h2>
+        <h2>Made By <a href="https://akshprooo.vercel.app" className="underline text-white">Aksh Tiwari</a> and <a href="https://github.com/prince12626" className="text-white underline">Prince Chaurasiya</a></h2>
       </footer>
     </div>
   );
