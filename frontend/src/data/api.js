@@ -1,1 +1,1 @@
-export const uri = 'http://localhost:5000/api/v1';
+export const uri = 'https://skilllink-backend.vercel.app/api/v1';

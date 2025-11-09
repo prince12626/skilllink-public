@@ -12,7 +12,7 @@ export const ServiceDetails = () => {
 
   const fetchService = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/v1/service/${id}/get`);
+      const res = await fetch(`https://skilllink-backend.vercel.app/api/v1/service/${id}/get`);
       if (!res.ok) throw new Error("Failed to fetch service");
       const data = await res.json();
       console.log(data)
@@ -27,7 +27,7 @@ export const ServiceDetails = () => {
 
   const getProfile = async () => {
     try {
-      const res = await fetch(`http://localhost:5000/api/v1/service/profile/${id}`);
+      const res = await fetch(`https://skilllink-backend.vercel.app/api/v1/service/profile/${id}`);
       if (!res.ok) throw new Error("Failed to fetch service");
       const data = await res.json();
       setServiceProvider(data);

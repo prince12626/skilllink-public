@@ -9,7 +9,7 @@ const data = {
   price: 49.99
 };
 
-axios.post('http://localhost:5000/api/v1/service/create', data, {
+axios.post('https://skilllink-backend.vercel.app/api/v1/service/create', data, {
   headers: { 'Content-Type': 'application/json' }
 })
 .then(response => {

@@ -7,7 +7,7 @@ const Service = () => {
 
   const fetchServices = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/v1/service/getall");
+      const res = await fetch("https://skilllink-backend.vercel.app/api/v1/service/getall");
       const data = await res.json();
       setServices(data);
     } catch (err) {

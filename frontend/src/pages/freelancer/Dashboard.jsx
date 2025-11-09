@@ -13,7 +13,7 @@ export const Dashboard = () => {
 
   // Get all services
   const getServices = async () => {
-    const res = await axios.get('http://localhost:5000/api/v1/service/getall');
+    const res = await axios.get('https://skilllink-backend.vercel.app/api/v1/service/getall');
     setServices(res.data);
   };
 
@@ -27,7 +27,7 @@ export const Dashboard = () => {
     try {
       const { title, description, price, imageURL, keywords } = newService;
       const res = await axios.post(
-        'http://localhost:5000/api/v1/service/create',
+        'https://skilllink-backend.vercel.app/api/v1/service/create',
         { title, description, price, imageURL, keywords: keywords.split(','), token:`${localStorage.getItem('token')}` },
       );
       setServices([...services, res.data]);
@@ -40,7 +40,7 @@ export const Dashboard = () => {
   // Delete a service
   const handleDeleteService = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/service/delete/${id}`, {
+      await axios.delete(`https://skilllink-backend.vercel.app/api/v1/service/delete/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
       });
       setServices(services.filter(service => service._id !== id));
