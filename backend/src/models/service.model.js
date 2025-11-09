@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const serviceSchema = new mongoose.Schema({
             owner: {
                         type: mongoose.Schema.Types.ObjectId,
-                        ref:'Freelancer'
+                        ref:'Freelancer',
+                        required: true,
             },
             title: {
                         type: String,

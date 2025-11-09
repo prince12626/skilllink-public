@@ -8,11 +8,11 @@ import UserProvider from './context/user.context.jsx'
 
 
 createRoot(document.getElementById('root')).render(
-  <UserProvider>
-    <ServiceProvider>
-      <BrowserRouter>
+  <BrowserRouter>
+    <UserProvider>
+      <ServiceProvider>
         <App />
-      </BrowserRouter>
-    </ServiceProvider>
-  </UserProvider>
+      </ServiceProvider>
+    </UserProvider>
+  </BrowserRouter>
 )

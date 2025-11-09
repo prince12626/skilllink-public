@@ -4,8 +4,11 @@ import axios from 'axios'
 import {uri} from '../data/api'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { useUser } from '../context/user.context'
 
 const Login = () => {
+
+  const {user,setUser} = useUser();
   const navigate = useNavigate()
   const [formData, setFormData] = useState({
     phone: '',
@@ -27,33 +30,33 @@ const Login = () => {
     setLoading(true)
 
     try {
-      // ✅ Dynamically choose endpoint based on role
       const endpoint =
         role === 'user'
           ? `${uri}/auth/user/login`
           : `${uri}/auth/freelancer/login`
 
       const res = await axios.post(endpoint, formData, {
-        headers: { 'Content-Type': 'application/json' }
-      })
+        headers: { "Content-Type": "application/json" }
+      });
+
 
       const data = res.data
-
-      // ✅ Save token + role in localStorage
-      if (data.token) {
+      console.log(res)
         localStorage.setItem('token', data.token)
         localStorage.setItem('role', role)
-      }
+        setUser({
+          loggedin:true
+        });
+        console.log(user)
+      
 
-      // ✅ Show success toast
       toast.success(`Logged in successfully as ${role}!`, {
         position: 'top-right',
         autoClose: 2500
       })
 
-      // Redirect after a short delay
       setTimeout(() => {
-        navigate(role === 'user' ? '/user/dashboard' : '/freelancer/dashboard')
+        navigate(role === 'user' ? '/services' : '/freelancer/dashboard')
       }, 2500)
     } catch (err) {
       if (err.response) {
@@ -61,6 +64,7 @@ const Login = () => {
           position: 'top-right'
         })
       } else if (err.request) {
+        console.log(err)
         toast.error('Server not responding. Try again later.', {
           position: 'top-right'
         })

@@ -26,5 +26,5 @@ const ServiceProvider = ({ children }) => {
 export default ServiceProvider
 
 export const useServices = () => {
-  useContext(serviceContext)
+  return useContext(serviceContext)
 }
