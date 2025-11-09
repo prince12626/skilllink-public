@@ -33,8 +33,8 @@ Customers can browse, view, and hire nearby freelancers seamlessly.
 ## **Integrations**
 
 * **MongoDB Atlas** – Cloud database
-* **Auth0** – Authentication
-* **Gemini** – AI integration
+* **Vercel** – Deployment
+* **JsonWebToken and Bcrypt** – Auth
 
 ---
 
@@ -103,5 +103,6 @@ SkillLink/
 * AI-based matching system
 * Real-time chat between freelancers and customers
 * Integrated booking and payments
+* Subscriptions/Memberships, Digital Currency and many more engagement factors.
 
 ---
