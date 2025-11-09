@@ -33,8 +33,8 @@ Customers can browse, view, and hire nearby freelancers seamlessly.
 ## **Integrations**
 
 * **MongoDB Atlas** – Cloud database
-* **Auth0** – Authentication
-* **Gemini** – AI integration
+* **Vercel** – Deployment
+* **JsonWebToken and Bcrypt** – Auth
 
 ---
 
